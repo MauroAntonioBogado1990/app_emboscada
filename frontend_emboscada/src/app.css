@@ -11,6 +11,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-chipá: #a32b07;
+  --color-yerbal: #119648;
+  --color-ñandutí: #f0e4c4;
+  --color-río: #63dff5;
+
 }
 
 a {
@@ -28,6 +34,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--color-ñandutí);
+  color: var(--color-chipá);
+
 }
 
 h1 {
@@ -56,15 +65,25 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  background-color: var(--color-río);
+  color: white;
 }
 button:hover {
   border-color: #646cff;
+  background-color: var(--color-yerbal);
+
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+h1 {
+  font-family: 'Merriweather', serif;
+}
+p, a, button {
+  font-family: 'Inter', sans-serif;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -77,3 +96,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--color-ñandutí);
+    display: flex;
+    justify-content: space-around;
+  }
+}
+

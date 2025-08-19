@@ -2,33 +2,35 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+  import web_logo from '/public/web_logo.png'
 </script>
 
 <main>
   <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+    
+    <a href="/tu-ronda" class="nav-btn">Tatakua</a>
+    <a href="/tu-ronda" class="nav-btn">Tu ronda de chipás</a>
   </div>
-  <h1>Vite + Svelte</h1>
+  <h1>Chiperia Emboscada</h1>
+    <img src={web_logo} alt="Logo Chipería Emboscada" class="web-logo" />
 
-  <div class="card">
-    <Counter />
-  </div>
+ 
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
 
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  
+
+
+
 </main>
 
 <style>
+ .web-logo {
+    display: block;
+    margin: 1rem auto;
+    max-width: 500px;
+    height: auto;
+  }
+
   .logo {
     height: 6em;
     padding: 1.5em;
@@ -44,4 +46,12 @@
   .read-the-docs {
     color: #888;
   }
+  .basket {
+    display: flex;
+    gap: 0.5em;
+  }
+  .chipa {
+    font-size: 2em;
+  }
+
 </style>
