@@ -1,1 +1,0 @@
-# Pydantic para validaciones
