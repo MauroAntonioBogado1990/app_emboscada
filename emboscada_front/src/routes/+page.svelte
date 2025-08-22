@@ -12,6 +12,8 @@
 
 <section>
 	<h1>
+		Chipería Emboscada
+		
 		<span class="welcome">
 			<picture>
 				<!-- <source srcset={welcome} type="image/webp" /> -->
@@ -20,7 +22,7 @@
 			</picture>
 		</span>
 
-		Chipería<br />Emboscada
+		
 	</h1>
 
 	<h2>

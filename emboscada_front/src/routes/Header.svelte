@@ -6,15 +6,13 @@
 </script>
 
 <header>
-	<div class="corner">
-		<!-- <a href="https://svelte.dev/docs/kit">
-			<img src={logo} alt="SvelteKit" />
-		</a> -->
+	<!-- <div class="corner">
+	
 		<a href="https://svelte.dev/docs/kit">
 			<img src={loguito} alt="Emboscada" />
 		</a>
 
-	</div>
+	</div> -->
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -28,7 +26,7 @@
 				<a href="/about">Tatakúa</a>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
+				<a href="/sverdle">Nosotros</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -46,7 +44,10 @@
 <style>
 	header {
 		display: flex;
-		justify-content: space-between;
+		/* justify-content: space-between; */
+		justify-content: center;
+	    align-items: center;
+
 	}
 
 	.corner {
