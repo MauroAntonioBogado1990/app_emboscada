@@ -4,6 +4,8 @@
 	import chipachedar from '$lib/images/chipachedar.jpg';
 	let countTradicional = 0;
 	let countCheddar = 0;
+	let precioTradicional = 3000;
+	let precioCheddar = 3500;
 
 </script>
 
@@ -26,6 +28,7 @@
 			<img src={chipatradicional} alt="Chipería Tradicional" />
 	</picture>
 	<h3>Receta clásica, con almidón, queso </h3>
+	<h3>Precio: ${precioTradicional}</h3>
 	<div class="contador">
 	<button on:click={() => countTradicional--} disabled={countTradicional === 0}>-</button>
 	<span>{countTradicional}</span>
@@ -38,6 +41,7 @@
 		<img src={chipachedar} alt="Chipería Chedar" />
 	</picture>
 	<h3>Chipa con Queso Chedar</h3>	
+	<h3>Precio: ${precioCheddar}</h3>
     <div class="contador">
 		<button on:click={() => countCheddar--} disabled={countCheddar === 0}>-</button>
 		<span>{countCheddar}</span>
