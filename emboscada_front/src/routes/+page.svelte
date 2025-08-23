@@ -25,11 +25,11 @@
 		
 	</h1>
 
-	<h2>
+	<!-- <h2>
 		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	</h2> -->
 
-	<Counter />
+	<!-- <Counter /> -->
 </section>
 
 <style>

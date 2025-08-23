@@ -23,10 +23,10 @@
 				<a href="/">Fogón</a>
 			</li>
 			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">Tatakúa</a>
+				<a href="/about">Tu Canasta</a>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Nosotros</a>
+				<a href="/sverdle">Tatakúa</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
