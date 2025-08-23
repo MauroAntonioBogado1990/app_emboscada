@@ -47,7 +47,26 @@
 		<span>{countCheddar}</span>
 		<button on:click={() => countCheddar++}>+</button>
    </div>
-  
+    
+
+   <div class="resumen-pedido">
+	<h2>🧺 Tu Canasta</h2>
+	<ul>
+		{#if countTradicional > 0}
+			<li>Chipa Tradicional: {countTradicional} unidad(es) — ${countTradicional * precioTradicional}</li>
+		{/if}
+		{#if countCheddar > 0}
+			<li>Chipa Dorada: {countCheddar} unidad(es) — ${countCheddar * precioCheddar}</li>
+		{/if}
+	</ul>
+
+	<h3>Total: ${countTradicional * precioTradicional + countCheddar * precioCheddar}</h3>
+
+	{#if countTradicional + countCheddar > 0}
+		<button class="confirmar">Confirmar pedido</button>
+	{/if}
+</div>
+
 
 		
 
@@ -93,5 +112,42 @@
 		font-size: 1.5rem;
 		font-weight: bold;
 	}
+    .resumen-pedido {
+	background-color: #fefae0;
+	padding: 1.5rem;
+	border-radius: 10px;
+	margin-top: 2rem;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+.resumen-pedido h2 {
+	color: #bc6c25;
+	margin-bottom: 1rem;
+}
+
+.resumen-pedido ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 1rem;
+}
+
+.resumen-pedido li {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.resumen-pedido h3 {
+	font-size: 1.5rem;
+	color: #283618;
+}
+
+.confirmar {
+	background-color: #606c38;
+	color: white;
+	border: none;
+	padding: 0.7rem 1.2rem;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
 </style>
