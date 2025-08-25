@@ -6,6 +6,8 @@
 	let countCheddar = 0;
 	let precioTradicional = 3000;
 	let precioCheddar = 3500;
+    let nombreRetira = '';
+	let metodoPago = '';
 
 </script>
 
@@ -63,7 +65,28 @@
 	<h3>Total: ${countTradicional * precioTradicional + countCheddar * precioCheddar}</h3>
 
 	{#if countTradicional + countCheddar > 0}
-		<button class="confirmar">Confirmar pedido</button>
+		<div class="datos-retiro">
+			<label>
+				👤 Nombre de quien retira:
+				<input type="text" bind:value={nombreRetira} placeholder="Ej. Mauro" /><br/>
+			</label>
+
+			<label>
+				💰 Método de pago:
+				<select bind:value={metodoPago}>
+					<option value="" disabled selected>Seleccionar</option>
+					<option value="debito">Débito</option>
+					<option value="efectivo">Efectivo</option>
+					<option value="qr">QR</option>
+					<option value="transferencia">Transferencia</option>
+				</select>
+			</label>
+		</div>
+
+		<button class="confirmar" disabled={!nombreRetira || !metodoPago}>
+			Confirmar pedido
+		</button>
+ 
 	{/if}
 </div>
 
@@ -149,5 +172,42 @@
 	font-size: 1.1rem;
 	border-radius: 5px;
 	cursor: pointer;
+
+.resumen-pedido {
+		padding: 1rem;
+		background: #fff8f0;
+		border-radius: 8px;
+		max-width: 400px;
+		margin: auto;
+	}
+	.datos-retiro {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	label {
+		display: flex;
+		flex-direction: column;
+		font-weight: bold;
+	}
+	input, select {
+		padding: 0.5rem;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+	}
+	.confirmar {
+		margin-top: 1rem;
+		padding: 0.75rem;
+		background-color: #ffcc00;
+		border: none;
+		border-radius: 6px;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	.confirmar:disabled {
+		background-color: #ddd;
+		cursor: not-allowed;
+	}
 }
 </style>
