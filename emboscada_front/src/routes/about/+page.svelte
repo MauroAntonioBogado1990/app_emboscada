@@ -1,5 +1,5 @@
 <script lang="ts">
-	
+
 	import chipatradicional from '$lib/images/chipatradicional.jpg';
 	import chipachedar from '$lib/images/chipachedar.jpg';
 	let countTradicional = 0;
@@ -8,6 +8,23 @@
 	let precioCheddar = 3500;
     let nombreRetira = '';
 	let metodoPago = '';
+
+	/*Agregado de funcion de envío por whatsapp*/
+	function enviarPedidoPorWhatsApp() {
+	const total = countTradicional * precioTradicional + countCheddar * precioCheddar;
+
+	const mensaje = `Hola! Quiero hacer un pedido:\n
+🧺 Chipa Tradicional: ${countTradicional} unidad(es)\n
+🧺 Chipa Dorada: ${countCheddar} unidad(es)\n
+💰 Total: $${total}\n
+👤 Retira: ${nombreRetira}\n
+💳 Método de pago: ${metodoPago}`;
+
+	const numero = '549345'; // Reemplazá con el número de WhatsApp de la chipería
+	const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+	window.open(url, '_blank');
+}
 
 </script>
 
@@ -36,20 +53,20 @@
 	<span>{countTradicional}</span>
 	<button on:click={() => countTradicional++}>+</button>
     </div>
-	
+
 	<!---->
 	<h1><strong>Chipa dorada</strong></h1>
 	<picture>
 		<img src={chipachedar} alt="Chipería Chedar" />
 	</picture>
-	<h3>Chipa con Queso Chedar</h3>	
+	<h3>Chipa con Queso Chedar</h3>
 	<h3>Precio: ${precioCheddar}</h3>
     <div class="contador">
 		<button on:click={() => countCheddar--} disabled={countCheddar === 0}>-</button>
 		<span>{countCheddar}</span>
 		<button on:click={() => countCheddar++}>+</button>
    </div>
-    
+
 
    <div class="resumen-pedido">
 	<h2>🧺 Tu Canasta</h2>
@@ -83,19 +100,22 @@
 			</label>
 		</div>
 
-		<button class="confirmar" disabled={!nombreRetira || !metodoPago}>
+		<!-- <button class="confirmar" disabled={!nombreRetira || !metodoPago}>
+			Confirmar pedido
+		</button> -->
+		<button class="confirmar" disabled={!nombreRetira || !metodoPago} on:click={enviarPedidoPorWhatsApp}>
 			Confirmar pedido
 		</button>
- 
+
 	{/if}
 </div>
 
 
-		
 
-	
 
-	
+
+
+
 </div>
 <style>
 	picture {
@@ -104,11 +124,11 @@
 		align-items: center;
 	}
     img {
-		
+
 		max-width: 50%;
 		height: auto;
 		border-radius: 10%	;
-	}	
+	}
 	.contador {
 		display: flex;
 		align-items: center;
