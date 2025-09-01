@@ -14,11 +14,11 @@
 	const total = countTradicional * precioTradicional + countCheddar * precioCheddar;
 
 	const mensaje = `Hola! Quiero hacer un pedido:\n
-🧺 Chipa Tradicional: ${countTradicional} unidad(es)\n
-🧺 Chipa Dorada: ${countCheddar} unidad(es)\n
-💰 Total: $${total}\n
-👤 Retira: ${nombreRetira}\n
-💳 Método de pago: ${metodoPago}`;
+    Chipa Tradicional: ${countTradicional} unidad(es)\n
+    Chipa Dorada: ${countCheddar} unidad(es)\n
+    Total: $${total}\n
+    Retira: ${nombreRetira}\n
+    Método de pago: ${metodoPago}`;
 
 	const numero = '549345'; // Reemplazá con el número de WhatsApp de la chipería
 	const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;

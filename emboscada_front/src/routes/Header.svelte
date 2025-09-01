@@ -3,13 +3,14 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import loguito from '$lib/images/loguito.png';
 	import github from '$lib/images/github.svg';
+	import loguitor from '$lib/images/loguito-removebg-preview.png';
 </script>
 
 <header>
 	<!-- <div class="corner">
 	
-		<a href="https://svelte.dev/docs/kit">
-			<img src={loguito} alt="Emboscada" />
+		<a >
+			<img src={loguitor} alt="Emboscada" />
 		</a>
 
 	</div> -->
