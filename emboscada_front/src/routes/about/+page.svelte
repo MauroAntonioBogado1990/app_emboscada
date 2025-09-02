@@ -4,8 +4,8 @@
 	import chipachedar from '$lib/images/chipachedar.jpg';
 	let countTradicional = 0;
 	let countCheddar = 0;
-	let precioTradicional = 3000;
-	let precioCheddar = 3500;
+	let precioTradicional = 1600;
+	let precioCheddar = 1700;
     let nombreRetira = '';
 	let metodoPago = '';
 
@@ -34,19 +34,15 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>Nuestras Chipas</h1>
-
-	<p>
-		En la herencia que hemos recibido de mis abuelos y padres, es el amor por el terruños y nuestras tradiciones litoraleñas, <br/>
-		de ese amor nace este empredimiento de poder mostrar nuestra querencia en sabores y poder traer un pedacito de nuestra tierra
-		,recuerdos de nuestros seres queridos a cada uno de ustedes.
-	</p>
+	
     <h1>Variedades</h1>
 	<h1><strong>Chipa tradicional</strong></h1>
+	
 	<picture>
 			<img src={chipatradicional} alt="Chipería Tradicional" />
 	</picture>
-	<h3>Receta clásica, con almidón, queso </h3>
+	<h3>Receta clásica, con fécula de mandioca, y queso  </h3>
+	Por unidad de 100 gr cada una
 	<h3>Precio: ${precioTradicional}</h3>
 	<div class="contador">
 	<button on:click={() => countTradicional--} disabled={countTradicional === 0}>-</button>
@@ -59,7 +55,8 @@
 	<picture>
 		<img src={chipachedar} alt="Chipería Chedar" />
 	</picture>
-	<h3>Chipa con Queso Chedar</h3>
+	<h3>Chipa con fécula de mandioca y queso cheddar</h3>
+	Por unidad de 100 gr cada una
 	<h3>Precio: ${precioCheddar}</h3>
     <div class="contador">
 		<button on:click={() => countCheddar--} disabled={countCheddar === 0}>-</button>
