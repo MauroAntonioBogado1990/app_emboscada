@@ -15,7 +15,33 @@
 		,recuerdos de nuestros seres queridos a cada uno de ustedes. <br/>
 		
 	</p>
-	<h1>valores</h1>
-	
-	
+
+	<section style="background-color:#fff8f2; padding:2rem;">
+  <h1 style="text-align:center; color:#e86c00; font-size:2.5rem;"><strong>VALORES</strong></h1>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; margin-top:2rem;">
+    
+    <div>
+      <h2 style="color:#d43f3f;">Calidad</h2>
+      <p>Utilizamos ingredientes frescos y de primera calidad, cuidando cada detalle para lograr una chipa que represente lo mejor de nuestra tierra.</p>
+    </div>
+
+    <div>
+      <h2 style="color:#d43f3f;">Tradición</h2>
+      <p>Respetamos las recetas y técnicas de nuestras abuelas, honrando la memoria familiar y el saber ancestral en cada preparación.</p>
+    </div>
+
+    <div>
+      <h2 style="color:#d43f3f;">Amor por el trabajo</h2>
+      <p>Cada chipa es elaborada con dedicación, constancia y alegría. El amor se siente en el aroma, en la textura y en el compartir.</p>
+    </div>
+
+    <div>
+      <h2 style="color:#d43f3f;">Higiene</h2>
+      <p>Mantenemos los más altos estándares de limpieza y sanidad, garantizando un producto seguro, confiable y respetuoso con el entorno.</p>
+    </div>
+
+  </div>
+</section>
+
+
 </div>

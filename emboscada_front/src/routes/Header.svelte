@@ -48,7 +48,7 @@
 		/* justify-content: space-between; */
 		justify-content: center;
 	    align-items: center;
-
+        
 	}
 
 	.corner {
@@ -98,11 +98,13 @@
 		list-style: none;
 		background: var(--background);
 		background-size: contain;
+		
 	}
 
 	li {
 		position: relative;
 		height: 100%;
+		
 	}
 
 	li[aria-current='page']::before {
@@ -115,6 +117,7 @@
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid var(--color-theme-1);
+		
 	}
 
 	nav a {

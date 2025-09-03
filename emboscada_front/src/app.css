@@ -37,16 +37,18 @@ h1,
 h2,
 p {
 	font-weight: 400;
+	font-size: 25px;
 }
 
 p {
 	line-height: 1.5;
-	font-size: 18px;
+	font-size: 25px;
 }
 
 a {
 	color: var(--color-theme-1);
 	text-decoration: none;
+	font-size: 25px;
 }
 
 a:hover {
@@ -56,6 +58,7 @@ a:hover {
 h1 {
 	font-size: 2rem;
 	text-align: center;
+	font-size: 25px;
 }
 
 h2 {
@@ -63,7 +66,7 @@ h2 {
 }
 
 pre {
-	font-size: 16px;
+	font-size: 26px;
 	font-family: var(--font-mono);
 	background-color: rgba(236, 206, 140, 0.75);
 	border-radius: 3px;
@@ -85,6 +88,7 @@ pre {
 input,
 button {
 	font-size: inherit;
+	font-size: 25px;
 	font-family: inherit;
 }
 

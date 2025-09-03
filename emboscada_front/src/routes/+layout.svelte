@@ -14,8 +14,8 @@
 
 	<footer>
 		<p>
-			Gracias por visitarnos! abrazo litoraleño!!
-			Nos encontramos en: 
+			Gracias por visitarnos! abrazo litoraleño!!<br/>
+			Nos encontramos también en: 
 
 		</p>
 		<a href="https://www.instagram.com/emboscadachiperia" target="_blank" rel="noopener noreferrer" class="instagram-link">
