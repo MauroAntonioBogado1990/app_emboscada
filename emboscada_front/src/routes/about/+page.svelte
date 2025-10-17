@@ -1,14 +1,39 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
+	let precioTradicional = 0;
+	let precioCheddar = 0;
+	let precioSalame = 0;
+
+onMount(async () => {
+	const res = await fetch("https://raw.githubusercontent.com/MauroAntonioBogado1990/preciosChipas/main/precioschipas.json");
+	const data = await res.json();
+
+	// Buscar por nombre o ID
+	for (const chipa of data.chipas) {
+		if (chipa.id === 1 || chipa.nombre.includes("Tradicional")) {
+			precioTradicional = chipa.precio_base;
+		}
+		if (chipa.id === 2 || chipa.nombre.includes("Queso")) {
+			precioCheddar = chipa.precio_base;
+		}
+		if (chipa.id === 3 || chipa.nombre.includes("Salame")) {
+			precioSalame = chipa.precio_base;
+		}
+	}
+});
+
 
 	import chipatradicional from '$lib/images/chipatradicional.jpg';
+	import chipatradicionales from '$lib/images/chipatradicionales.jpg';
 	import chipachedar from '$lib/images/chipachedar.jpg';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 	import logo from '$lib/images/logo.png';
 	let countTradicional = 0;
 	let countCheddar = 0;
-	let precioTradicional = 1600;
-	let precioCheddar = 1700;
+	// let precioTradicional = 2000;
+	// let precioCheddar = 2100;
     let nombreRetira = '';
 	let metodoPago = '';
 
@@ -51,7 +76,8 @@
 	<h1><strong>Chipa tradicional</strong></h1>
 	
 	<picture>
-			<img src={chipatradicional} alt="Chipería Tradicional" />
+			<!-- <img src={chipatradicional} alt="Chipería Tradicional" /> -->
+			<img src={chipatradicionales} alt="Chipería Tradicional" />
 	</picture>
 	<h3>Receta clásica, con fécula de mandioca, y queso  </h3>
 	<strong>Por unidad de 100 gr cada una</strong>
