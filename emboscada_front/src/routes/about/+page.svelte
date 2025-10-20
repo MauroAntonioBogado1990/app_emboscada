@@ -43,7 +43,7 @@ onMount(async () => {
 
 	const mensaje = `Hola! Quiero hacer un pedido:\n
     Chipa Tradicional: ${countTradicional} unidad(es)\n
-    Chipa Dorada: ${countCheddar} unidad(es)\n
+    Volcan de Queso: ${countCheddar} unidad(es)\n
     Total: $${total}\n
     Retira: ${nombreRetira}\n
     Método de pago: ${metodoPago}`;
@@ -89,7 +89,7 @@ onMount(async () => {
     </div>
 
 	<!---->
-	<h1><strong>Chipa dorada</strong></h1>
+	<h1><strong>Volcán de Queso</strong></h1>
 	<picture>
 		<img src={chipachedar} alt="Chipería Chedar" />
 	</picture>
@@ -110,7 +110,7 @@ onMount(async () => {
 			<li>Chipa Tradicional: {countTradicional} unidad(es) — ${countTradicional * precioTradicional}</li>
 		{/if}
 		{#if countCheddar > 0}
-			<li>Chipa Dorada: {countCheddar} unidad(es) — ${countCheddar * precioCheddar}</li>
+			<li>Volcán de Queso: {countCheddar} unidad(es) — ${countCheddar * precioCheddar}</li>
 		{/if}
 	</ul>
 
