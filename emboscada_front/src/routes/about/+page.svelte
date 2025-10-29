@@ -24,14 +24,16 @@ onMount(async () => {
 });
 
 
-	import chipatradicional from '$lib/images/chipatradicional.jpg';
-	import chipatradicionales from '$lib/images/chipatradicionales.jpg';
-	import chipachedar from '$lib/images/chipachedar.jpg';
+	import chipatradicional from '$lib/images/chipacomun.jpg';
+	import chipatradicionales from '$lib/images/chipacomun.jpg';
+	import chipasalame from '$lib/images/chipasalame.jpg';
+	import chipachedar from '$lib/images/volcandequeso.jpg';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 	import logo from '$lib/images/logo.png';
 	let countTradicional = 0;
 	let countCheddar = 0;
+	let countSalame = 0;
 	// let precioTradicional = 2000;
 	// let precioCheddar = 2100;
     let nombreRetira = '';
@@ -44,6 +46,7 @@ onMount(async () => {
 	const mensaje = `Hola! Quiero hacer un pedido:\n
     Chipa Tradicional: ${countTradicional} unidad(es)\n
     Volcan de Queso: ${countCheddar} unidad(es)\n
+    Chipa con Fiambre: ${countSalame} unidad(es)\n
     Total: $${total}\n
     Retira: ${nombreRetira}\n
     Método de pago: ${metodoPago}`;
@@ -79,8 +82,8 @@ onMount(async () => {
 			<!-- <img src={chipatradicional} alt="Chipería Tradicional" /> -->
 			<img src={chipatradicionales} alt="Chipería Tradicional" />
 	</picture>
-	<h3>Receta clásica, con fécula de mandioca, y queso  </h3>
-	<strong>Por unidad de 100 gr cada una</strong>
+	<h3>Receta clásica, con fécula de mandioca, y queso, hecha con la receta original Emboscada</h3>
+	<strong>Por 3 unidades (total 100 gr)</strong>
 	<h3>Precio: ${precioTradicional}</h3>
 	<div class="contador">
 	<button on:click={() => countTradicional--} disabled={countTradicional === 0}>-</button>
@@ -93,15 +96,29 @@ onMount(async () => {
 	<picture>
 		<img src={chipachedar} alt="Chipería Chedar" />
 	</picture>
-	<h3>Chipa con fécula de mandioca y queso cheddar</h3>
-	<strong>Por unidad de 100 gr cada una</strong>
+	<h3>Chipa con fécula de mandioca y queso cremoso, hecha con la receta original Emboscada</h3>
+	<strong>Por 3 unidades (total 100 gr)</strong>
 	<h3>Precio: ${precioCheddar}</h3>
     <div class="contador">
 		<button on:click={() => countCheddar--} disabled={countCheddar === 0}>-</button>
 		<span>{countCheddar}</span>
 		<button on:click={() => countCheddar++}>+</button>
    </div>
-
+   <!--chipa con fiambre-->
+   <h1><strong>Chipa con Fiambre</strong></h1>
+	
+	<picture>
+			<!-- <img src={chipatradicional} alt="Chipería Tradicional" /> -->
+			<img src={chipasalame} alt="Chipería con Fiambre" />
+	</picture>
+	<h3>Receta clásica, con fécula de mandioca, y con el fiambre que más te guste salame o jamón, hecha con la receta original Emboscada  </h3>
+	<strong>Por 3 unidades (total 100 gr)</strong>
+	<h3>Precio: ${precioSalame}</h3>
+	<div class="contador">
+	<button on:click={() => countSalame--} disabled={countSalame === 0}>-</button>
+	<span>{countSalame}</span>
+	<button on:click={() => countSalame++}>+</button>
+    </div>
 
    <div class="resumen-pedido">
 	<h2>🧺 Tu Canasta</h2>
