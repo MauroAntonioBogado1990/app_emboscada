@@ -28,7 +28,7 @@
 
     <div>
       <h3 style="color:#d43f3f;">Tradición</h3>
-      <p>Respetamos las recetas y técnicas de nuestras abuelas, honrando la memoria familiar y el saber ancestral en cada preparación.</p>
+      <p>Respetamos las recetas y técnicas de nuestras abuelas, honrando la memoria familiar y el saber ancestral en cada preparación.Y así surgió este la receta original Emboscada.</p>
     </div>
 
     <div>

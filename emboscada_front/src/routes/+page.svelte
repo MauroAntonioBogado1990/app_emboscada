@@ -45,7 +45,7 @@
 		width: 100%;
 	}
 
-	.welcome {
+	/* .welcome {
 		display: block;
 		position: relative;
 		width: 100%;
@@ -53,11 +53,24 @@
 	    padding: 0 0 calc(100% * 495 / 2048) 0;
 		
 		
-	}
-    
+	} */.welcome {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 300px; /* ajustá según el tamaño que querés */
+	margin: 0 auto;
+}
+
+.welcome img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
 	
 
-	.welcome img {
+	/* .welcome img {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -65,5 +78,5 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: -1;
-		}
+		} */
 </style>
