@@ -4,11 +4,14 @@
 	let precioTradicional = 0;
 	let precioCheddar = 0;
 	let precioSalame = 0;
+	let numeroWhatsApp = '';
+
 
 onMount(async () => {
 	const res = await fetch("https://raw.githubusercontent.com/MauroAntonioBogado1990/preciosChipas/main/precioschipas.json");
 	const data = await res.json();
-
+    
+	numeroWhatsApp = data.telefono;
 	// Buscar por nombre o ID
 	for (const chipa of data.chipas) {
 		if (chipa.id === 1 || chipa.nombre.includes("Tradicional")) {
@@ -51,8 +54,8 @@ onMount(async () => {
     Retira: ${nombreRetira}\n
     Método de pago: ${metodoPago}`;
 
-	const numero = '549345'; // Reemplazá con el número de WhatsApp de la chipería
-	const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+	//const numero = '549345'; // Reemplazá con el número de WhatsApp de la chipería
+	const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
 	window.open(url, '_blank');
 }
